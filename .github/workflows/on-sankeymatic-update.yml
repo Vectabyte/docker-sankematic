@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Download previous release info
         id: download-artifact
-        uses: dawidd6/action-download-artifact@v6 # It's not possible to use actions/upload-artifact as of the time of writing
+        uses: dawidd6/action-download-artifact@latest # It's not possible to use actions/upload-artifact as of the time of writing
         with:
           name: sankeymatic-release-info
           workflow_conclusion: success
@@ -48,6 +48,6 @@ jobs:
 
       - name: Call workflow to build code
         if: steps.compare_release.outputs.release_changed == 'true'
-        uses: benc-uk/workflow-dispatch@v1
+        uses: benc-uk/workflow-dispatch@latest
         with:
           workflow: publish.yml
