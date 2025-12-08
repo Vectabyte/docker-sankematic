@@ -44,7 +44,7 @@ jobs:
           path: sankeymatic-release-info
 
       - name: Check out the repo
-        uses: actions/checkout@v6.0.0
+        uses: actions/checkout@v6.0.1
         with:
           repository: nowthis/sankeymatic
           ref: "${{ steps.get_release.outputs.LATEST_SHA }}"
